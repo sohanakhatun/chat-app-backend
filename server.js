@@ -21,10 +21,7 @@ app.use("/api/message", messageRoutes);
 
 // --------------------------deployment------------------------------
 
-// app.use(express.static(path.join(__dirname,"../client/build")));
-// app.get('*',function (req,res) {
-//   res.sendFile(path.join(__dirname,'../client/build/index.html'));
-// });
+
 
 // --------------------------deployment------------------------------
 
@@ -42,7 +39,7 @@ const server = app.listen(
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://localhost:3000",
     // credentials: true,
   },
 });
