@@ -6,14 +6,16 @@ const chatRoutes = require("./routes/chatRoutes");
 const messageRoutes = require("./routes/messageRoutes");
 const { notFound, errorHandler } = require("./middleware/errorMiddleware");
 const path = require("path");
-
+const cors = require('cors');
 dotenv.config();
 connectDB();
 const app = express();
 
 app.use(express.json()); 
 
-
+app.use(cors({
+  origin:["http://localhost:3000","https://chat-app-frontend-z83s.onrender.com"]
+}))
 
 app.use("/user", userRoutes);
 app.use("/chat", chatRoutes);
