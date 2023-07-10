@@ -15,7 +15,7 @@ app.use(express.json());
 
 app.use(cors({
   origin:["http://localhost:3000",
-          "https://chat-app-frontend-6b77.onrender.com"],
+          "https://chat-app-client-6zbm.onrender.com"],
 }))
 
 app.use("/user", userRoutes);
